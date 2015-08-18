@@ -8,6 +8,8 @@ CREATE TABLE IF NOT EXISTS `#__rssaggregator_source` (
 `category` INT NOT NULL ,
 `featured` VARCHAR(255)  NOT NULL ,
 `show_graphic` VARCHAR(255)  NOT NULL ,
+`allow_links` VARCHAR(255)  NOT NULL ,
+`split_after_x` VARCHAR(12)  NOT NULL ,
 PRIMARY KEY (`id`)
 ) DEFAULT COLLATE=utf8_general_ci;
 

@@ -138,6 +138,12 @@ if (!empty($this->extra_sidebar)) {
 				<th class='left'>
 				<?php echo JHtml::_('grid.sort',  'COM_RSSAGGREGATOR_SOURCES_SHOW_GRAPHIC', 'a.show_graphic', $listDirn, $listOrder); ?>
 				</th>
+				<th class='left'>
+				<?php echo JHtml::_('grid.sort',  'COM_RSSAGGREGATOR_SOURCES_ALLOW_LINKS', 'a.allow_links', $listDirn, $listOrder); ?>
+				</th>
+				<th class='left'>
+				<?php echo JHtml::_('grid.sort',  'COM_RSSAGGREGATOR_SOURCES_SPLIT_AFTER_X', 'a.split_after_x', $listDirn, $listOrder); ?>
+				</th>
                     
                     
                 <?php if (isset($this->items[0]->id)): ?>
@@ -235,6 +241,14 @@ if (!empty($this->extra_sidebar)) {
 				<td>
 
 					<?php echo $item->show_graphic; ?>
+				</td>
+				<td>
+
+					<?php echo $item->allow_links; ?>
+				</td>
+				<td>
+
+					<?php echo $item->split_after_x; ?>
 				</td>
 
 

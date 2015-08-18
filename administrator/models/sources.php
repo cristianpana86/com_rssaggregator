@@ -34,6 +34,8 @@ class RssaggregatorModelSources extends JModelList {
                 'category', 'a.category',
                 'featured', 'a.featured',
                 'show_graphic', 'a.show_graphic',
+                'allow_links', 'a.allow_links',
+                'split_after_x', 'a.split_after_x',
 
             );
         }
@@ -167,6 +169,7 @@ class RssaggregatorModelSources extends JModelList {
 			}
 					$oneItem->featured = JText::_('COM_RSSAGGREGATOR_SOURCES_FEATURED_OPTION_' . strtoupper($oneItem->featured));
 					$oneItem->show_graphic = JText::_('COM_RSSAGGREGATOR_SOURCES_SHOW_GRAPHIC_OPTION_' . strtoupper($oneItem->show_graphic));
+					$oneItem->allow_links = JText::_('COM_RSSAGGREGATOR_SOURCES_ALLOW_LINKS_OPTION_' . strtoupper($oneItem->allow_links));
 		}
         return $items;
     }

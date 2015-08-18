@@ -121,6 +121,8 @@ class RssaggregatorViewSources extends JViewLegacy {
 		'a.category' => JText::_('COM_RSSAGGREGATOR_SOURCES_CATEGORY'),
 		'a.featured' => JText::_('COM_RSSAGGREGATOR_SOURCES_FEATURED'),
 		'a.show_graphic' => JText::_('COM_RSSAGGREGATOR_SOURCES_SHOW_GRAPHIC'),
+		'a.allow_links' => JText::_('COM_RSSAGGREGATOR_SOURCES_ALLOW_LINKS'),
+		'a.split_after_x' => JText::_('COM_RSSAGGREGATOR_SOURCES_SPLIT_AFTER_X'),
 		);
 	}
 

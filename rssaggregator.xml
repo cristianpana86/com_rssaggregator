@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_rssaggregator</name>
+    <creationDate>2015-08-07</creationDate>
+    <copyright>Copyright (C) 2015. All rights reserved.</copyright>
+    <license>GPL 2</license>
+    <author>Pana Cristian</author>
+    <authorEmail>cristianpana86@yahoo.com</authorEmail>
+    <authorUrl>http://</authorUrl>
+    <version>1.0.0</version>
+    <description>RSS Aggregator by Cristian Pana
+</description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>rssaggregator.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_rssaggregator.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_rssaggregator/assets/images/s_com_rssaggregator.png" >COM_RSSAGGREGATOR</menu>
+        <submenu>
+            
+			<menu link="option=com_rssaggregator&amp;view=sources" view="sources" img="components/com_rssaggregator/assets/images/s_sources.png" alt="Rssaggregator/Sources">COM_RSSAGGREGATOR_TITLE_SOURCES</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>rssaggregator.php</filename>
+			<filename>cron.rssaggregator.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_rssaggregator.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_rssaggregator.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="rssaggregator"/>
+    </plugins>
+    
+</extension>
+

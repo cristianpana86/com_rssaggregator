@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_RSSAGGREGATOR_FORM_LBL_SOURCE_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="rss_link" type="text"
+                
+            label="COM_RSSAGGREGATOR_FORM_LBL_SOURCE_RSS_LINK"
+            description="COM_RSSAGGREGATOR_FORM_DESC_SOURCE_RSS_LINK" 
+                
+                
+                 required="true" 
+            filter="url" /> 
+
+       <field name="rss_name" type="text"
+                
+            label="COM_RSSAGGREGATOR_FORM_LBL_SOURCE_RSS_NAME"
+            description="COM_RSSAGGREGATOR_FORM_DESC_SOURCE_RSS_NAME" 
+                
+                
+                 required="true"  /> 
+
+       <field name="no_of_posts" type="text"
+                
+            label="COM_RSSAGGREGATOR_FORM_LBL_SOURCE_NO_OF_POSTS"
+            description="COM_RSSAGGREGATOR_FORM_DESC_SOURCE_NO_OF_POSTS" 
+                 default="0" 
+                
+                 required="true" 
+            menu_published="0"
+            filter="int"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+       <field name="author" type="user"
+                
+            label="COM_RSSAGGREGATOR_FORM_LBL_SOURCE_AUTHOR"
+            description="COM_RSSAGGREGATOR_FORM_DESC_SOURCE_AUTHOR" 
+                
+                
+                 required="true"  /> 
+
+ <field name="category" type="foreignkey" class="inputbox"
+            label="COM_RSSAGGREGATOR_FORM_LBL_SOURCE_CATEGORY"
+            description="COM_RSSAGGREGATOR_FORM_DESC_SOURCE_CATEGORY" input_type="list" table="#__categories" key_field="id" value_field="title"  required="true"  /> 
+
+       <field name="featured" type="radio"
+                
+            label="COM_RSSAGGREGATOR_FORM_LBL_SOURCE_FEATURED"
+            description="COM_RSSAGGREGATOR_FORM_DESC_SOURCE_FEATURED" 
+                 default="0" 
+                
+                 required="true" 
+            option_on="Yes"
+            option_off="Yes">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+        </field> 
+
+       <field name="show_graphic" type="radio"
+                
+            label="COM_RSSAGGREGATOR_FORM_LBL_SOURCE_SHOW_GRAPHIC"
+            description="COM_RSSAGGREGATOR_FORM_DESC_SOURCE_SHOW_GRAPHIC" 
+                 default="1" 
+                
+                
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+        </field>
+
+	</fieldset>
+
+</form>

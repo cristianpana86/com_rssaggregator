@@ -73,7 +73,30 @@
             option_off="Yes">
                 <option value="0">No</option>
                 <option value="1">Yes</option>
-        </field>
+        </field> 
+
+       <field name="allow_links" type="radio"
+                
+            label="COM_RSSAGGREGATOR_FORM_LBL_SOURCE_ALLOW_LINKS"
+            description="COM_RSSAGGREGATOR_FORM_DESC_SOURCE_ALLOW_LINKS" 
+                 default="0" 
+                
+                
+            option_on="Yes"
+            option_off="Yes">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+        </field> 
+
+       <field name="split_after_x" type="text"
+                
+            label="COM_RSSAGGREGATOR_FORM_LBL_SOURCE_SPLIT_AFTER_X"
+            description="COM_RSSAGGREGATOR_FORM_DESC_SOURCE_SPLIT_AFTER_X" 
+                 default="0" 
+                
+                
+            filter="int"
+            maxlength="12" />
 
 	</fieldset>
 

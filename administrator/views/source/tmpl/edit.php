@@ -96,6 +96,14 @@ $document->addStyleSheet('components/com_rssaggregator/assets/css/rssaggregator.
 				<div class="control-label"><?php echo $this->form->getLabel('show_graphic'); ?></div>
 				<div class="controls"><?php echo $this->form->getInput('show_graphic'); ?></div>
 			</div>
+			<div class="control-group">
+				<div class="control-label"><?php echo $this->form->getLabel('allow_links'); ?></div>
+				<div class="controls"><?php echo $this->form->getInput('allow_links'); ?></div>
+			</div>
+			<div class="control-group">
+				<div class="control-label"><?php echo $this->form->getLabel('split_after_x'); ?></div>
+				<div class="controls"><?php echo $this->form->getInput('split_after_x'); ?></div>
+			</div>
 
 
                 </fieldset>

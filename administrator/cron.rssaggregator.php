@@ -5,7 +5,7 @@ define('_JREQUEST_NO_CLEAN', 1);
  
 //basic to make J! happy
 define('_JEXEC', 1); //make j! happy
-define('JPATH_BASE', realpath(substr(dirname(__FILE__),0,strpos(dirname(__FILE__),'administrator'))));;
+define('JPATH_BASE', realpath(substr(dirname(__FILE__),0,strpos(dirname(__FILE__),'administrator'))));
 define('DS', DIRECTORY_SEPARATOR);
 
 
@@ -49,8 +49,9 @@ $model=new rssagregatorModelrssaggregator();
 if ($model->setPropr())
 {
 	
-	$list_of_feed_articles=$rss->getContent($model->feedsList,$model->noOfFeeds,$model->show_graphic);
-    if(isset($list_of_feed_articles))
+	$list_of_feed_articles=$rss->getContent($model->feedsList,$model->noOfFeeds,$model->show_graphic,$model->allow_links,$model->split_after_x);
+	
+    if(isset($list_of_feed_articles[0]))
 	{
 	
 		//$i variable to iterate over arrays containing authors/category/featured
@@ -77,7 +78,8 @@ if ($model->setPropr())
 					$tobind = array(
 						   "title" => $feed_article['title'],
 						   "alias" => JFilterOutput::stringURLUnicodeSlug($feed_article['title']),
-						   "introtext" => $feed_article['desc'],
+						   "introtext" => $feed_article['introtext'],
+						   "fulltext"=>$feed_article['fulltext'],
 						   "state"=>'1',
 						   "created"=>JFactory::getDate()->toSql(),
 						   "featured"=>$featured,

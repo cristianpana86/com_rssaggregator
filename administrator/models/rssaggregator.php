@@ -6,7 +6,7 @@
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
- 
+
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
@@ -25,7 +25,13 @@ class rssagregatorModelrssaggregator extends JModelItem
 	 */
 		
 	public $feedsList;
+	/**
+	 * @var  array noOfFeeds- no of articles for each feed
+	 */
 	public $noOfFeeds;
+	/**
+	 * @var  array featuredArray - if articles from that feed should show up as featured
+	 */
 	public $featuredArray;
 	/**
 	 * @var  array author - one author per each feed source
@@ -40,6 +46,16 @@ class rssagregatorModelrssaggregator extends JModelItem
 	 * @var  array show graphic yes/no condition, actual values holded are 1 and 0
 	 */
 	public $show_graphic;
+	
+	/**
+	 * @var  array allow_links - allow links yes/no condition, actual values holded are 0 for no, 1 for yes
+	 */
+	public $allow_links;
+	
+	/**
+	 * @var  integer number of characters after which page break should be inserted. if the value is 0 no page break will be inserted
+	 */
+	public $split_after_x;
  
 	/**
 	 * Get the message
@@ -80,6 +96,12 @@ class rssagregatorModelrssaggregator extends JModelItem
 			
 			$db->setQuery($query);
 			$this->show_graphic = $db->loadColumn(7);
+			
+			$db->setQuery($query);
+			$this->allow_links = $db->loadColumn(8);
+			
+			$db->setQuery($query);
+			$this->split_after_x = $db->loadColumn(9);
 			
 		}catch(Exception $e){
 		    return false;
@@ -130,6 +152,8 @@ class rssagregatorModelrssaggregator extends JModelItem
 	
 	
 	}
+	
+	
 	
 
 }
